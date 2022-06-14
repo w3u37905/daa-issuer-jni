@@ -53,13 +53,6 @@ include_directories(/home/benlar/Projects/AndroidLibs/incubator-milagro-crypto-c
 #endif()
 #message(STATUS "Ossl: ${CMAKE_SOURCE_DIR}/ssl_lib")
 
-find_library( # Sets the name of the path variable.
-        log-lib
-
-        # Specifies the name of the NDK library that
-        # you want CMake to locate.
-        log)
-
 add_library( # Sets the name of the library.
         daabridgecpp
 
@@ -73,5 +66,5 @@ add_library( # Sets the name of the library.
 #message(STATUS "Dependencies that will be built: ${DEPENDENCY_LIST}")
 
 
-target_link_libraries(daabridgecpp m crypto cjson ibmtss amcl_bls_FP256BN amcl_mpin_FP256BN amcl_curve_FP256BN amcl_pairing_FP256BN amcl_wcc_FP256BN ${log-lib})
+target_link_libraries(daabridgecpp m crypto cjson ibmtss amcl_bls_FP256BN amcl_mpin_FP256BN amcl_curve_FP256BN amcl_pairing_FP256BN amcl_wcc_FP256BN)
 #add_dependencies(daabridgecpp ${DEPENDENCY_LIST})
