@@ -22,8 +22,12 @@ add_definitions(-DTPM_POSIX -DTPM_TPM20)
 #    link_directories(${OPENSSL_LIB_PATH})
 #    list(APPEND DEPENDENCY_LIST "OPENSSL")
 #endif()
-link_directories(/home/benlar/Projects/OpenSSL/openssl_android/lib/x86_64)
-include_directories(/home/benlar/Projects/OpenSSL/openssl_android/inc/x86_64)
+
+find_package(OpenSSL REQUIRED)
+target_link_libraries(untitled OpenSSL::SSL)
+
+#link_directories(/home/benlar/Projects/OpenSSL/openssl_android/lib/x86_64)
+#include_directories(/home/benlar/Projects/OpenSSL/openssl_android/inc/x86_64)
 
 link_directories(/home/benlar/Projects/AndroidLibs/ibmtss/utils/.libs)
 include_directories(/home/benlar/Projects/AndroidLibs/ibmtss/utils)
