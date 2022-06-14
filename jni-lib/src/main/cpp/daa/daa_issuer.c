@@ -12,7 +12,6 @@
 #include "openssl/rsa.h"
 #include "issPk.h"
 #include "BN_Crypto.h"
-#include <android/log.h>
 #define  LOG_TAG    "DAA-BRIDGE"
 
 #define  LOGD(...)  __android_log_print(ANDROID_LOG_DEBUG, LOG_TAG, __VA_ARGS__)

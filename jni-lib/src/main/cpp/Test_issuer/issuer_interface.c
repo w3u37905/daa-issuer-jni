@@ -18,7 +18,6 @@
 #include "openssl/ec.h"
 #include "issuer_interface.h"
 
-#include <android/log.h>
 #include <cJSON.h>
 
 #define  LOG_TAG    "DAA-BRIDGE"

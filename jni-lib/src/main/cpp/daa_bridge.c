@@ -14,7 +14,6 @@
 #include "templates.h"
 #include "cryptoutils.h"
 #include "objecttemplates.h"
-#include <android/log.h>
 
 #define  LOG_TAG    "DAA-BRIDGE"
 

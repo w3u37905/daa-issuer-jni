@@ -9,7 +9,6 @@
 #include "Test_issuer/issuer_interface.h"
 #include "objecttemplates.h"
 #include "cryptoutils.h"
-#include <android/log.h>
 #include <openssl/rand.h>
 #include <cJSON.h>
 
