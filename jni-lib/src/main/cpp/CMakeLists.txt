@@ -25,8 +25,8 @@ add_definitions(-DTPM_POSIX -DTPM_TPM20)
 
 find_package(OpenSSL REQUIRED)
 
-link_directories(/home/benlar/Projects/AndroidLibs/ibmtss/utils/.libs)
-include_directories(/home/benlar/Projects/AndroidLibs/ibmtss/utils)
+link_directories(/home/menelaos/libs/ibmtss/utils/.libs)
+include_directories(/home/menelaos/libs/ibmtss/utils)
 
 link_directories(/home/benlar/Projects/AndroidLibs/cJSON)
 include_directories(/home/benlar/Projects/AndroidLibs/cJSON)
