@@ -57,10 +57,17 @@ add_library( # Sets the name of the library.
 
         # Sets the library as a shared library.
         SHARED
+        ""
+        )
+
+target_sources(
+        daabridgecpp
+        PRIVATE
         daa/defines.h daa/daa_client_base.h daa/daa_client_base.c daa/daa_issuer.h daa/BN_Crypto.h daa/BN_Crypto.c daa/daa_issuer.c daa/issPk.h daa/issPk.c daa/daa_pairings.h daa/daa_pairings.c
         daa_bridge.h daa_bridge.c persistence.h defines.h bridge_tpm.h bridge_tpm.c persistence.c hash.h hash.c policy.h cryptoutils.c cryptoutils.h  templates.h templates.c policy.c objecttemplates.h objecttemplates.c Test_issuer/issuer_interface.h Test_issuer/issuer_interface.c
         native-lib.cpp
-        )
+)
+
 
 #message(STATUS "Dependencies that will be built: ${DEPENDENCY_LIST}")
 
