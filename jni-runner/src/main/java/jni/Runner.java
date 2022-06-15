@@ -25,8 +25,8 @@ public class Runner {
 
         System.out.println( daa.bar() );
 
-//        daa.registerIssuerPK(issuerPk);
-//        daa.registerIssuer_priv(issuerPriv);
+        daa.registerIssuerPK(issuerPk);
+        daa.registerIssuer_priv(issuerPriv);
 
 
     }
