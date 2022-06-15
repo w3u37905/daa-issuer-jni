@@ -28,8 +28,8 @@ find_package(OpenSSL REQUIRED)
 link_directories(/home/menelaos/libs/ibmtss/utils/.libs)
 include_directories(/home/menelaos/libs/ibmtss/utils)
 
-link_directories(/home/benlar/Projects/AndroidLibs/cJSON)
-include_directories(/home/benlar/Projects/AndroidLibs/cJSON)
+link_directories(/home/menelaos/libs/cJSON)
+include_directories(/home/menelaos/libs/cJSON)
 
 link_directories(/home/menelaos/libs/incubator-milagro-crypto-c/target/default/lib)
 include_directories(/home/menelaos/libs/incubator-milagro-crypto-c/include)
