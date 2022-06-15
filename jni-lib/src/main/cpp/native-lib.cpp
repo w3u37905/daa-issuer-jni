@@ -1,5 +1,5 @@
 #include <iostream>
-#include "jni_Tools.h"
+#include "jni_DAAInterface.h"
 
 
 JNIEXPORT jstring JNICALL Java_jni_DAAInterface_bar(JNIEnv *env, jobject thisObject)
