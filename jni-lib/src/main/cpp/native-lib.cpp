@@ -42,7 +42,7 @@ int wallet_sign_nonce(TPM2B_NONCE *nonce, uint8_t *digestOut, char *keyLocation,
     // Set digest 0
     memset(digestOut, 0, DIGEST_SIZE);
 
-    pemKeyFile = fopen("/sdcard/Documents/TPM/WK_priv.pem", "r");
+    pemKeyFile = fopen("WK_priv.pem", "r");
     if (pemKeyFile == NULL) {
         LOGD("Pem Keyfile null....\n");
     }
@@ -330,7 +330,7 @@ Java_jni_DAAInterface_runFullDemo(JNIEnv *env, jobject thiz) {
     requestNonce(&nonce);
     clock_t t;
     t = clock();
-    int len = wallet_sign_nonce(&nonce, nonce_digest, "/sdcard/Documents/TPM/Keys/wallet/key.pem",
+    int len = wallet_sign_nonce(&nonce, nonce_digest, "/Keys/wallet/key.pem",
                                 nonce_sig);
 
 
@@ -341,7 +341,7 @@ Java_jni_DAAInterface_runFullDemo(JNIEnv *env, jobject thiz) {
     LOGD("\n[ \t Wallet Signs Nonce to Authorize a Sign Operation\t]\n");
 
     requestNonce(&nonce);
-    len = wallet_sign_nonce(&nonce, nonce_digest, "/sdcard/Documents/TPM/Keys/wallet/key.pem",
+    len = wallet_sign_nonce(&nonce, nonce_digest, "/Keys/wallet/key.pem",
                             nonce_sig);
 
     uint8_t msg[10];
@@ -497,7 +497,7 @@ Java_jni_DAAInterface_CreateEnableResponse(JNIEnv *env, jobject thiz,
     // We assume that the bridge have set the IssuerPublicKey now
     TPM2B_PUBLIC issPk;
     convertEcPemToPublic(&issPk, TYPE_SI, TPM_ALG_ECDSA, TPM_ALG_SHA256, TPM_ALG_SHA256,
-                         "/sdcard/Documents/TPM/IS.pem");
+                         "IS.pem");
 
     // Create attestationKey
     TPMT_PUBLIC ak = onCreateAttestationKeyCommand(&issPk, signedNonce_C, nonceLen);
@@ -838,7 +838,7 @@ Java_jni_DAAInterface_prepareEnableResponse(JNIEnv *env, jobject thiz,
     uint8_t nonce_sig[150];
     LOGD("\n[ \t Wallet Requesting & Signing Nonce \t]\n");
 
-    int len = wallet_sign_nonce(&n, nonce_digest, "/sdcard/Documents/TPM/Keys/wallet/key.pem",
+    int len = wallet_sign_nonce(&n, nonce_digest, "/Keys/wallet/key.pem",
                                 nonce_sig);
 
     jbyteArray jNonce = env->NewByteArray(len);
@@ -881,7 +881,7 @@ Java_jni_DAAInterface_walletDoMeASignPlz(JNIEnv *env, jobject thiz,
     uint8_t nonce_sig[150];
     LOGD("\n[ \t Wallet Requesting & Signing Nonce \t]\n");
 
-    int len = wallet_sign_nonce(&n, nonce_digest, "/sdcard/Documents/TPM/Keys/wallet/key.pem",
+    int len = wallet_sign_nonce(&n, nonce_digest, "/Keys/wallet/key.pem",
                                 nonce_sig);
 
     jbyteArray jNonce = env->NewByteArray(len);

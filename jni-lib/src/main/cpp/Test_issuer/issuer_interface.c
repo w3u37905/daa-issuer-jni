@@ -95,13 +95,13 @@ void getNameFromPublic(TPMT_PUBLIC *publicKey, unsigned char *nameOut) {
 void setIssuerName() {
     TPM2B_PUBLIC pk;
     convertEcPemToPublic(&pk, TYPE_SI, TPM_ALG_ECDSA, TPM_ALG_SHA256, TPM_ALG_SHA256,
-                         "/sdcard/Documents/TPM/IS.pem");
+                         "IS.pem");
     getNameFromPublic(&pk.publicArea, issuer_nae);
 }
 
 void loadWalletKey() {
     convertEcPemToPublic(&client_wk, TYPE_SI, TPM_ALG_ECDSA, TPM_ALG_SHA256, TPM_ALG_SHA256,
-                         "/sdcard/Documents/TPM/WK.pem");
+                         "WK.pem");
 
 }
 
@@ -110,7 +110,7 @@ TPM2B_PUBLIC loadIssuerAuthorizationKey() {
     TPM2B_PUBLIC pk;
 
     convertEcPemToPublic(&pk, TYPE_SI, TPM_ALG_ECDSA, TPM_ALG_SHA256, TPM_ALG_SHA256,
-                         "/sdcard/Documents/TPM/IS.pem");
+                         "IS.pem");
 
     return pk;
 

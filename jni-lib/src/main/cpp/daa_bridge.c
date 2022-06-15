@@ -24,11 +24,11 @@
 // Keys
 PRIMARY_KEY ek_key;
 PRIMARY_KEY daa_key_p;
-const char *walletKeyPath = "/sdcard/Documents/TPM/WK.pem";
-const char *issuerKeyPath = "/sdcard/Documents/TPM/IS.pem";
+const char *walletKeyPath = "WK.pem";
+const char *issuerKeyPath = "IS.pem";
 
-const char *issuerPrivKeyPath = "/sdcard/Documents/TPM/IS_priv.pem";
-const char *walletPrivKeyPath = "/sdcard/Documents/TPM/WK_priv.pem";
+const char *issuerPrivKeyPath = "IS_priv.pem";
+const char *walletPrivKeyPath = "WK_priv.pem";
 
 
 SIGNATURE_VERIFICATION auth_ticket;
@@ -53,7 +53,7 @@ void load_wallet_key(TPM2B_PUBLIC *wkPub) {
 
 void load_is_key(TPM2B_PUBLIC *wkPub) {
     convertEcPemToPublic(wkPub, TYPE_SI, TPM_ALG_ECDSA, TPM_ALG_SHA256, TPM_ALG_SHA256,
-                         "/sdcard/Documents/TPM/Keys/public.pem");
+                         "public.pem");
 
 }
 
