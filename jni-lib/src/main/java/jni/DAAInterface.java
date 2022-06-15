@@ -2,7 +2,7 @@ package jni;
 
 public class DAAInterface {
     static {
-        if (!LibraryLoader.load(Tools.class, "daabridgecpp"))
+        if (!LibraryLoader.load(DAAInterface.class, "daabridgecpp"))
             System.loadLibrary("daabridgecpp");
     }
 
