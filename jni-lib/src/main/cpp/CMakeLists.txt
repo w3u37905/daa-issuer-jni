@@ -24,10 +24,6 @@ add_definitions(-DTPM_POSIX -DTPM_TPM20)
 #endif()
 
 find_package(OpenSSL REQUIRED)
-#target_link_libraries(untitled OpenSSL::SSL)
-
-#link_directories(/home/benlar/Projects/OpenSSL/openssl_android/lib/x86_64)
-#include_directories(/home/benlar/Projects/OpenSSL/openssl_android/inc/x86_64)
 
 link_directories(/home/benlar/Projects/AndroidLibs/ibmtss/utils/.libs)
 include_directories(/home/benlar/Projects/AndroidLibs/ibmtss/utils)
@@ -35,9 +31,8 @@ include_directories(/home/benlar/Projects/AndroidLibs/ibmtss/utils)
 link_directories(/home/benlar/Projects/AndroidLibs/cJSON)
 include_directories(/home/benlar/Projects/AndroidLibs/cJSON)
 
-
-link_directories(/home/benlar/Projects/AndroidLibs/incubator-milagro-crypto-c/lib)
-include_directories(/home/benlar/Projects/AndroidLibs/incubator-milagro-crypto-c/include)
+link_directories(/home/menelaos/libs/incubator-milagro-crypto-c/target/default/lib)
+include_directories(/home/menelaos/libs/incubator-milagro-crypto-c/target/default/include)
 
 #if(NOT (${AMCL_INCLUDE_PATH} AND ${AMCL_LIB_PATH}))
 #    include(cmake/buildAMCL.cmake)
