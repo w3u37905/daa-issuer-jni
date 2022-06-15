@@ -18,8 +18,6 @@
 #define  LOGD(...)  printf(__VA_ARGS__)
 #define  LOGE(...)  printf(__VA_ARGS__)
 
-printf("[-] Error in calculating mod\n");
-
 TPM_RC rc = 0;
 TSS_CONTEXT *ctx = NULL;
 
