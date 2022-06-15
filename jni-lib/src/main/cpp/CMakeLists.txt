@@ -1,56 +1,28 @@
 #add_library(tools SHARED "")
 #target_sources(tools PRIVATE tools.cpp)
 
-
-project("daabridgecpp")
-
-set (COMPILE_FLAGS "-O2")
-add_definitions(-DTPM_POSIX -DTPM_TPM20)
-#set(DEPENDENCY_LIST "")
-
-## Need IBMTSS
-#if(NOT (${IBMTSS_INCLUDE_PATH} AND ${IBMTSS_LIB_PATH}))
-#    include(cmake/buildTSS.cmake)
-#    include_directories(${IBMTSS_INCLUDE_PATH})
-#    list(APPEND DEPENDENCY_LIST "IBMTSS")
-#endif()
-
-## Need OSSL
-#if(NOT (${OPENSSL_INCLUDE_PATH} AND ${OPENSSL_LIB_PATH}))
-#    include(cmake/buildOpenSSL.cmake)
-#    include_directories(${OPENSSL_INCLUDE_PATH})
-#    link_directories(${OPENSSL_LIB_PATH})
-#    list(APPEND DEPENDENCY_LIST "OPENSSL")
-#endif()
-
-find_package(OpenSSL REQUIRED)
-
-link_directories(/home/menelaos/libs/ibmtss/utils)
-include_directories(/home/menelaos/libs/ibmtss/utils)
-
-link_directories(/home/menelaos/libs/cJSON/build)
-include_directories(/home/menelaos/libs/cJSON)
-
-link_directories(/home/menelaos/libs/incubator-milagro-crypto-c/lib)
-include_directories(/home/menelaos/libs/incubator-milagro-crypto-c/include)
-
-#if(NOT (${AMCL_INCLUDE_PATH} AND ${AMCL_LIB_PATH}))
-#    include(cmake/buildAMCL.cmake)
-#    include_directories(${AMCL_INCLUDE_PATH})
-#    list(APPEND DEPENDENCY_LIST "AMCL")
-#endif()
-#link_directories(${IBMTSS_LIB_PATH})
-#link_directories(${AMCL_LIB_PATH})
+add_library(daabridgecpp SHARED "")
+target_sources(daabridgecpp PRIVATE native-lib.cpp)
 
 
-## Need AMCL
-#if(NOT (${AMCL_INCLUDE_PATH} AND ${AMCL_LIB_PATH}))
-#    include(cmake/buildAMCL.cmake)
-#    include_directories(${AMCL_INCLUDE_PATH})
-#    link_directories(${AMCL_LIB_PATH})
-#    list(APPEND DEPENDENCY_LIST "AMCL")
-#endif()
-#message(STATUS "Ossl: ${CMAKE_SOURCE_DIR}/ssl_lib")
+
+
+#project("daabridgecpp")
+#
+#set (COMPILE_FLAGS "-O2")
+#add_definitions(-DTPM_POSIX -DTPM_TPM20)
+#
+#find_package(OpenSSL REQUIRED)
+#
+#link_directories(/home/menelaos/libs/ibmtss/utils)
+#include_directories(/home/menelaos/libs/ibmtss/utils)
+#
+#link_directories(/home/menelaos/libs/cJSON/build)
+#include_directories(/home/menelaos/libs/cJSON)
+#
+#link_directories(/home/menelaos/libs/incubator-milagro-crypto-c/lib)
+#include_directories(/home/menelaos/libs/incubator-milagro-crypto-c/include)
+
 
 #add_library( # Sets the name of the library.
 #        daabridgecpp
@@ -68,14 +40,4 @@ include_directories(/home/menelaos/libs/incubator-milagro-crypto-c/include)
 #        native-lib.cpp
 #)
 
-add_library(daabridgecpp SHARED "")
-target_sources(daabridgecpp PRIVATE native-lib.cpp)
-
-
-
-
-#message(STATUS "Dependencies that will be built: ${DEPENDENCY_LIST}")
-
-
 #target_link_libraries(daabridgecpp m crypto cjson ibmtss amcl_bls_FP256BN amcl_mpin_FP256BN amcl_curve_FP256BN amcl_pairing_FP256BN amcl_wcc_FP256BN)
-#add_dependencies(daabridgecpp ${DEPENDENCY_LIST})
