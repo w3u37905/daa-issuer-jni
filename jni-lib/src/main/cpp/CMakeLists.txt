@@ -32,7 +32,7 @@ link_directories(/home/benlar/Projects/AndroidLibs/cJSON)
 include_directories(/home/benlar/Projects/AndroidLibs/cJSON)
 
 link_directories(/home/menelaos/libs/incubator-milagro-crypto-c/target/default/lib)
-include_directories(/home/menelaos/libs/incubator-milagro-crypto-c/target/default/include)
+include_directories(/home/menelaos/libs/incubator-milagro-crypto-c/include)
 
 #if(NOT (${AMCL_INCLUDE_PATH} AND ${AMCL_LIB_PATH}))
 #    include(cmake/buildAMCL.cmake)
