@@ -31,7 +31,7 @@ include_directories(/home/menelaos/libs/ibmtss/utils)
 link_directories(/home/menelaos/libs/cJSON/build)
 include_directories(/home/menelaos/libs/cJSON)
 
-link_directories(/home/menelaos/libs/incubator-milagro-crypto-c/target/default/lib)
+link_directories(/home/menelaos/libs/incubator-milagro-crypto-c/lib)
 include_directories(/home/menelaos/libs/incubator-milagro-crypto-c/include)
 
 #if(NOT (${AMCL_INCLUDE_PATH} AND ${AMCL_LIB_PATH}))
