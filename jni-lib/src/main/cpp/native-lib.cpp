@@ -116,7 +116,7 @@ int wallet_sign_nonce(TPM2B_NONCE *nonce, uint8_t *digestOut, char *keyLocation,
 }
 
 
-JNIEXPORT jstring JNICALL Java_jni_Tools_bar(JNIEnv *env, jobject thisObject)
+JNIEXPORT jstring JNICALL Java_jni_DAAInterface_bar(JNIEnv *env, jobject thisObject)
 {
   std::string res("bar");
   return env->NewStringUTF(res.c_str());
