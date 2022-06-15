@@ -1,5 +1,5 @@
-add_library(tools SHARED "")
-target_sources(tools PRIVATE tools.cpp)
+#add_library(tools SHARED "")
+#target_sources(tools PRIVATE tools.cpp)
 
 
 project("daabridgecpp")
