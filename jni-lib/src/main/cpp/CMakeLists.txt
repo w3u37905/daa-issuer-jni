@@ -68,8 +68,8 @@ include_directories(/home/menelaos/libs/incubator-milagro-crypto-c/include)
 #        native-lib.cpp
 #)
 
-#add_library(daabridgecpp SHARED "")
-#target_sources(daabridgecpp PRIVATE native-lib.cpp)
+add_library(daabridgecpp SHARED "")
+target_sources(daabridgecpp PRIVATE native-lib.cpp)
 
 
 
