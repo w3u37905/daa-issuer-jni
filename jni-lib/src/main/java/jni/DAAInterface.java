@@ -6,6 +6,8 @@ public class DAAInterface {
             System.loadLibrary("daabridgecpp");
     }
 
+    public native String bar();
+
     public native void registerWalletPK(byte[] pemFile);
 
     public native void registerWallet_priv(byte[] pemFile);
