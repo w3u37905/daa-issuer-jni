@@ -12,6 +12,9 @@
 #include <openssl/rand.h>
 #include <cJSON.h>
 
+#include <iostream>
+#include "jni_Tools.h"
+
 #define  LOG_TAG    "DAA-NATIVE"
 
 #define  LOGD(...)  printf(__VA_ARGS__)
