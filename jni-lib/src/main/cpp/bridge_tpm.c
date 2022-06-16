@@ -15,8 +15,8 @@
 #define VERBOSE
 #define  LOG_TAG    "IBM-TPM"
 
-#define  LOGD(...) DEBUG_PRINT(__VA_ARGS__)
-#define  LOGE(...) DEBUG_PRINT(__VA_ARGS__)
+#define  LOGD(...)  printf(__VA_ARGS__)
+#define  LOGE(...)  printf(__VA_ARGS__)
 
 TPM_RC rc = 0;
 TSS_CONTEXT *ctx = NULL;
