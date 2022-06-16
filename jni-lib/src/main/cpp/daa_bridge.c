@@ -595,6 +595,7 @@ void writeKeyIfNotExists(uint8_t *key, int keyLen, char *keyName) {
         LOGD("Can't Write Key\n");
     } else {
         LOGD("Key write to %s success\n", keyName);
+        fflush(stdout);
     }
     for (i = 0; i < keyLen; i++) {
         fputc(key[i], fptr);
