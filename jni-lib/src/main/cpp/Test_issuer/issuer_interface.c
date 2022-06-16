@@ -421,7 +421,7 @@ char *send_issuer_registration(const char *json) {
 
     // Step 7a: Sign the join digest ( for commit )
     LOGD("\n[ \t DOOR Issuer Authorizes Key to Commit \t]\n");
-    commitAuth.sigLen = build_join_authorization("sdcard/Documents/TPM/IS_priv.pem",
+    commitAuth.sigLen = build_join_authorization("IS_priv.pem",
                                                  commitAuth.signature, commitAuth.digest,
                                                  commitAuth.approvedPolicy);
 
@@ -429,7 +429,7 @@ char *send_issuer_registration(const char *json) {
     LOGD("\n[ \t DOOR Issuer Authorizes Key to be use in PCR and Signed Context (By Wallet)\t]\n");
     // Step 7: Sign the authorized digest
     TPML_PCR_SELECTION select = getPCRSelection(2, 1, 12);
-    signAuth.sigLen = build_sign_authorization("sdcard/Documents/TPM/IS_priv.pem",
+    signAuth.sigLen = build_sign_authorization("IS_priv.pem",
                                                signAuth.signature,
                                                signAuth.digest, &select, signAuth.approvedPolicy);
 
