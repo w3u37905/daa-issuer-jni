@@ -22,8 +22,8 @@
 
 #define  LOG_TAG    "DAA-BRIDGE"
 
-#define  LOGD(...)  printf(__VA_ARGS__)
-#define  LOGE(...)  printf(__VA_ARGS__)
+#define  LOGD(...)  printf(LOG_TAG": " __VA_ARGS__); fflush(stdout);
+#define  LOGE(...)  printf(LOG_TAG": " __VA_ARGS__); fflush(stdout);
 
 
 TPM2B_PUBLIC client_ek;

@@ -15,8 +15,8 @@
 #define VERBOSE
 #define  LOG_TAG    "IBM-TPM"
 
-#define  LOGD(...)  printf(__VA_ARGS__)
-#define  LOGE(...)  printf(__VA_ARGS__)
+#define  LOGD(...)  printf(LOG_TAG": " __VA_ARGS__); fflush(stdout);
+#define  LOGE(...)  printf(LOG_TAG": " __VA_ARGS__); fflush(stdout);
 
 TPM_RC rc = 0;
 TSS_CONTEXT *ctx = NULL;
