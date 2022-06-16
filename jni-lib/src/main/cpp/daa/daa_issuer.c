@@ -14,8 +14,8 @@
 #include "BN_Crypto.h"
 #define  LOG_TAG    "DAA-BRIDGE"
 
-#define  LOGD(...)  printf(__VA_ARGS__)
-#define  LOGE(...)  printf(__VA_ARGS__)
+#define  LOGD(...) DEBUG_PRINT(__VA_ARGS__)
+#define  LOGE(...) DEBUG_PRINT(__VA_ARGS__)
 
 
 ECC_POINT daa_stored;

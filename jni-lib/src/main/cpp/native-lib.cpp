@@ -17,8 +17,8 @@
 
 #define  LOG_TAG    "DAA-NATIVE"
 
-#define  LOGD(...)  printf(__VA_ARGS__)
-#define  LOGE(...)  printf(__VA_ARGS__)
+#define  LOGD(...) DEBUG_PRINT(__VA_ARGS__)
+#define  LOGE(...) DEBUG_PRINT(__VA_ARGS__)
 
 
 TPM2B_PUBLIC ek;
