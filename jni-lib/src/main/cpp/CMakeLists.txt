@@ -5,6 +5,10 @@
 #target_sources(daabridgecpp PRIVATE native-lib.cpp)
 
 
+message(STATUS "project source dir: ${PROJECT_SOURCE_DIR}")
+
+
+
 project("daabridgecpp")
 
 set (COMPILE_FLAGS "-O2")
