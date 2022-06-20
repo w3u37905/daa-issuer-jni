@@ -5,8 +5,6 @@
 #target_sources(daabridgecpp PRIVATE native-lib.cpp)
 
 
-
-
 project("daabridgecpp")
 
 set (COMPILE_FLAGS "-O2")
@@ -14,13 +12,13 @@ add_definitions(-DTPM_POSIX -DTPM_TPM20)
 
 find_package(OpenSSL REQUIRED)
 
-link_directories(/home/menelaos/libs/ibmtss/utils)
+link_directories(${PROJECT_SOURCE_DIR}/libs)
 include_directories(/home/menelaos/libs/ibmtss/utils)
 
-link_directories(/home/menelaos/libs/cJSON/build)
+link_directories(${PROJECT_SOURCE_DIR}/libs)
 include_directories(/home/menelaos/libs/cJSON)
 
-link_directories(/home/menelaos/libs/incubator-milagro-crypto-c/lib)
+link_directories(${PROJECT_SOURCE_DIR}/libs)
 include_directories(/home/menelaos/libs/incubator-milagro-crypto-c/include)
 
 
@@ -41,3 +39,9 @@ target_sources(
 )
 
 target_link_libraries(daabridgecpp m crypto cjson ibmtss amcl_bls_FP256BN amcl_mpin_FP256BN amcl_curve_FP256BN amcl_pairing_FP256BN amcl_wcc_FP256BN)
+
+
+set(CMAKE_INSTALL_PREFIX "${PROJECT_SOURCE_DIR}/../")
+set(INTELIJ_PATH "")
+
+install (DIRECTORY "${PROJECT_SOURCE_DIR}/libs" DESTINATION "${CMAKE_INSTALL_PREFIX}${INTELIJ_PATH}")
