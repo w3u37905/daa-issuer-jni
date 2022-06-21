@@ -26,6 +26,18 @@ link_directories(/home/menelaos/libs/incubator-milagro-crypto-c/lib)
 include_directories(/home/menelaos/libs/incubator-milagro-crypto-c/include)
 
 
+set(NATIVES_PATH "${PROJECT_SOURCE_DIR}/build/natives/lib")
+set(RESOURCES_PATH "${PROJECT_SOURCE_DIR}/src/main/resources")
+
+install (DIRECTORY "/home/menelaos/libs/ibmtss/utils" DESTINATION "${NATIVES_PATH}")
+install (DIRECTORY "/home/menelaos/libs/cJSON/build" DESTINATION "${NATIVES_PATH}")
+install (DIRECTORY "/home/menelaos/libs/incubator-milagro-crypto-c/lib" DESTINATION "${NATIVES_PATH}")
+install (DIRECTORY "/home/menelaos/libs/ibmtss/utils" DESTINATION "${RESOURCES_PATH}")
+install (DIRECTORY "/home/menelaos/libs/cJSON/build" DESTINATION "${RESOURCES_PATH}")
+install (DIRECTORY "/home/menelaos/libs/incubator-milagro-crypto-c/lib" DESTINATION "${RESOURCES_PATH}")
+
+
+
 add_library( # Sets the name of the library.
         daabridgecpp
 
@@ -44,12 +56,3 @@ target_sources(
 
 target_link_libraries(daabridgecpp m crypto cjson ibmtss amcl_bls_FP256BN amcl_mpin_FP256BN amcl_curve_FP256BN amcl_pairing_FP256BN amcl_wcc_FP256BN)
 
-set(NATIVES_PATH "${PROJECT_SOURCE_DIR}/build/natives/lib")
-set(RESOURCES_PATH "${PROJECT_SOURCE_DIR}/src/main/resources")
-
-install (DIRECTORY "/home/menelaos/libs/ibmtss/utils" DESTINATION "${NATIVES_PATH}")
-install (DIRECTORY "/home/menelaos/libs/cJSON/build" DESTINATION "${NATIVES_PATH}")
-install (DIRECTORY "/home/menelaos/libs/incubator-milagro-crypto-c/lib" DESTINATION "${NATIVES_PATH}")
-install (DIRECTORY "/home/menelaos/libs/ibmtss/utils" DESTINATION "${RESOURCES_PATH}")
-install (DIRECTORY "/home/menelaos/libs/cJSON/build" DESTINATION "${RESOURCES_PATH}")
-install (DIRECTORY "/home/menelaos/libs/incubator-milagro-crypto-c/lib" DESTINATION "${RESOURCES_PATH}")
