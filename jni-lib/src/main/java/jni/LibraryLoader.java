@@ -67,7 +67,7 @@ public class LibraryLoader {
     private static boolean extractResourceFiles(String nativeLibraryPath, String nativeLibraryName,
                                                 String tempFolder) throws IOException {
         String[] filenames = null;
-        filenames = new String[] {"libcjson.so"};
+        filenames = new String[] {"libcjson.so", "libdaabridgecpp.so"};
 
         boolean ret = true;
 
