@@ -76,7 +76,7 @@ public class LibraryLoader {
                 "libamcl_pairing_FP256BN.so",
                 "libamcl_wcc_FP256BN.so",
                 "libcrypto.so",
-                "libibmtss.so",
+                "libibmtss.so"
         };
 
         boolean ret = true;
