@@ -23,10 +23,10 @@ public class Runner {
         byte[] issuerPriv = ik_priv.getBytes();
 
 
-        System.out.println( daa.bar() );
+        //System.out.println( daa.bar() );
 
-        daa.registerIssuerPK(issuerPk);
-        daa.registerIssuer_priv(issuerPriv);
+        //daa.registerIssuerPK(issuerPk);
+        //daa.registerIssuer_priv(issuerPriv);
 
 
     }
