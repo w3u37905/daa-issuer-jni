@@ -57,8 +57,7 @@ public class LibraryLoader {
         }
 
         // Temporary library folder
-        //String tempFolder = new File(System.getProperty("java.io.tmpdir")).getAbsolutePath();
-        String tempFolder = nativeLibraryPath;
+        String tempFolder = new File(System.getProperty("java.io.tmpdir")).getAbsolutePath();
 
         // Extract resource files
         return extractResourceFiles(nativeLibraryPath, nativeLibraryName, tempFolder);
@@ -70,13 +69,14 @@ public class LibraryLoader {
         String[] filenames = null;
         filenames = new String[] {
                 "libcjson.so",
-                "libdaabridgecpp.so",
-                "libamcl_bls_FP256BN.so",
+                "libamcl_core.so",
                 "libamcl_curve_FP256BN.so",
-                "libamcl_mpin_FP256BN.so",
                 "libamcl_pairing_FP256BN.so",
+                "libamcl_bls_FP256BN.so",
+                "libamcl_mpin_FP256BN.so",
                 "libamcl_wcc_FP256BN.so",
-                "libibmtss.so"
+                "libibmtss.so",
+                "libdaabridgecpp.so",
         };
 
         boolean ret = true;
