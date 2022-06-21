@@ -19,7 +19,7 @@ find_package(OpenSSL REQUIRED)
 link_directories(${PROJECT_SOURCE_DIR}/libs)
 include_directories(/home/menelaos/libs/ibmtss/utils)
 
-link_directories(${PROJECT_SOURCE_DIR}/libs)
+link_directories(/home/menelaos/daa-issuer-jni/jni-lib/libs)
 include_directories(/home/menelaos/libs/cJSON)
 
 link_directories(${PROJECT_SOURCE_DIR}/libs)
