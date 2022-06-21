@@ -44,6 +44,9 @@ target_sources(
 
 #target_link_libraries(daabridgecpp m crypto cjson ibmtss amcl_bls_FP256BN amcl_mpin_FP256BN amcl_curve_FP256BN amcl_pairing_FP256BN amcl_wcc_FP256BN)
 
+target_link_libraries(daabridgecpp m cjson)
+
+
 
 set(CMAKE_INSTALL_PREFIX "${PROJECT_SOURCE_DIR}/../")
 set(INTELIJ_PATH "")
