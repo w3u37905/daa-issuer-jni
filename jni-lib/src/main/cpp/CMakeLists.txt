@@ -19,7 +19,7 @@ find_package(OpenSSL REQUIRED)
 link_directories(/home/menelaos/libs/ibmtss/utils)
 include_directories(/home/menelaos/libs/ibmtss/utils)
 
-link_directories(/home/menelaos/libs/cJSON/build)
+link_directories(/cJSON)
 include_directories(/home/menelaos/libs/cJSON)
 
 link_directories(/home/menelaos/libs/incubator-milagro-crypto-c/lib)
