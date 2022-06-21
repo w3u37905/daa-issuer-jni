@@ -82,6 +82,7 @@ public class LibraryLoader {
         boolean ret = true;
 
         for (String file : filenames) {
+            System.out.println(""+ file);
             ret &= extractAndLoadLibraryFile(nativeLibraryPath, file, tempFolder);
         }
 
