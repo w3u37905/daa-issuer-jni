@@ -6,8 +6,8 @@ public class DAAInterface {
 //            System.loadLibrary("daabridgecpp");
 
         try {
-            //LibraryLoader.loadAll(DAAInterface.class, "daabridgecpp");
-            LibraryLoader.load(DAAInterface.class, "daabridgecpp");
+            boolean loaded = LibraryLoader.loadAll(DAAInterface.class, "daabridgecpp");
+            System.out.println("Loaded: " + loaded);
         } catch (Exception e) {
             e.printStackTrace();
         }
