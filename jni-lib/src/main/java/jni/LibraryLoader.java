@@ -67,7 +67,24 @@ public class LibraryLoader {
     private static boolean extractResourceFiles(String nativeLibraryPath, String nativeLibraryName,
                                                 String tempFolder) throws IOException {
         String[] filenames = null;
-        filenames = new String[] {"libcjson.so", "libdaabridgecpp.so"};
+        filenames = new String[] {
+                "libcjson.so",
+                "libdaabridgecpp.so",
+                "libamcl_bls_FP256BN.so",
+                "libamcl_core.so",
+                "libamcl_curve_FP256BN.so",
+                "libamcl_mpin_FP256BN.so",
+                "libamcl_pairing_FP256BN.so",
+                "libamcl_rsa_2048.so",
+                "libamcl_rsa_3072.so",
+                "libamcl_rsa_4096.so",
+                "libamcl_wcc_FP256BN.so",
+                "libamcl_x509.so",
+                "libcjson.so",
+                "libcrypto.so",
+                "libibmtss.so",
+                "libssl.so"
+        };
 
         boolean ret = true;
 
