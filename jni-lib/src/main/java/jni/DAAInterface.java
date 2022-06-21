@@ -2,8 +2,15 @@ package jni;
 
 public class DAAInterface {
     static {
-        if (!LibraryLoader.load(DAAInterface.class, "daabridgecpp"))
-            System.loadLibrary("daabridgecpp");
+//        if (!LibraryLoader.loadAll(DAAInterface.class, "daabridgecpp"))
+//            System.loadLibrary("daabridgecpp");
+
+        try {
+            LibraryLoader.loadAll(DAAInterface.class, "daabridgecpp");
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
     }
 
     public native String bar();
