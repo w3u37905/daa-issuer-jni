@@ -43,7 +43,7 @@ target_sources(
 
 target_link_libraries(daabridgecpp m crypto cjson ibmtss amcl_bls_FP256BN amcl_mpin_FP256BN amcl_curve_FP256BN amcl_pairing_FP256BN amcl_wcc_FP256BN)
 
-set(NATIVES_PATH "${PROJECT_SOURCE_DIR}/build/natives/lib")
+set(NATIVES_PATH "${PROJECT_SOURCE_DIR}/../../../build/natives/lib")
 #set(RESOURCES_PATH "${PROJECT_SOURCE_DIR}/src/main")
 
 
