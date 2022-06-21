@@ -42,7 +42,7 @@ target_sources(
         native-lib.cpp
 )
 
-target_link_libraries(daabridgecpp m crypto cjson ibmtss amcl_bls_FP256BN amcl_mpin_FP256BN amcl_curve_FP256BN amcl_pairing_FP256BN amcl_wcc_FP256BN)
+#target_link_libraries(daabridgecpp m crypto cjson ibmtss amcl_bls_FP256BN amcl_mpin_FP256BN amcl_curve_FP256BN amcl_pairing_FP256BN amcl_wcc_FP256BN)
 
 
 set(CMAKE_INSTALL_PREFIX "${PROJECT_SOURCE_DIR}/../")
