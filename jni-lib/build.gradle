@@ -29,7 +29,7 @@ task compileJNI {
 
   doLast {
     exec {
-      commandLine 'sh', '-c', 'mkdir -p build/natives && cd build/natives && cmake ../.. --target install && make'
+      commandLine 'sh', '-c', 'mkdir -p build/natives && cd build/natives && cmake ../..  && make --target install'
     }
   }
 }
