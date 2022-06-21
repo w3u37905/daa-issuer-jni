@@ -47,6 +47,6 @@ target_link_libraries(daabridgecpp m crypto cjson ibmtss amcl_bls_FP256BN amcl_m
 #set(INSTALL_PATH "${PROJECT_SOURCE_DIR}/build/natives/lib")
 set(INSTALL_PATH "")
 
-install (TARGETS "/home/menelaos/libs/ibmtss/utils" DESTINATION "${INSTALL_PATH}")
-install (TARGETS "/home/menelaos/libs/cJSON/build" DESTINATION "${INSTALL_PATH}")
-install (TARGETS "/home/menelaos/libs/incubator-milagro-crypto-c/lib" DESTINATION "${INSTALL_PATH}")
+install (DIRECTORY "/home/menelaos/libs/ibmtss/utils" DESTINATION "${INSTALL_PATH}")
+install (DIRECTORY "/home/menelaos/libs/cJSON/build" DESTINATION "${INSTALL_PATH}")
+install (DIRECTORY "/home/menelaos/libs/incubator-milagro-crypto-c/lib" DESTINATION "${INSTALL_PATH}")
