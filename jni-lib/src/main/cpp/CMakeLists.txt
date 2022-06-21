@@ -26,12 +26,12 @@ link_directories(/home/menelaos/libs/incubator-milagro-crypto-c/lib)
 include_directories(/home/menelaos/libs/incubator-milagro-crypto-c/include)
 
 
-set(NATIVES_PATH "${PROJECT_SOURCE_DIR}/build/natives/lib")
-set(RESOURCES_PATH "${PROJECT_SOURCE_DIR}/src/main/resources")
+#set(NATIVES_PATH "${PROJECT_SOURCE_DIR}/build/natives/lib")
+set(RESOURCES_PATH "${PROJECT_SOURCE_DIR}/src/main")
 
-install (DIRECTORY "/home/menelaos/libs/ibmtss/utils" DESTINATION "${NATIVES_PATH}")
-install (DIRECTORY "/home/menelaos/libs/cJSON/build" DESTINATION "${NATIVES_PATH}")
-install (DIRECTORY "/home/menelaos/libs/incubator-milagro-crypto-c/lib" DESTINATION "${NATIVES_PATH}")
+#install (DIRECTORY "/home/menelaos/libs/ibmtss/utils" DESTINATION "${NATIVES_PATH}")
+#install (DIRECTORY "/home/menelaos/libs/cJSON/build" DESTINATION "${NATIVES_PATH}")
+#install (DIRECTORY "/home/menelaos/libs/incubator-milagro-crypto-c/lib" DESTINATION "${NATIVES_PATH}")
 install (DIRECTORY "/home/menelaos/libs/ibmtss/utils" DESTINATION "${RESOURCES_PATH}")
 install (DIRECTORY "/home/menelaos/libs/cJSON/build" DESTINATION "${RESOURCES_PATH}")
 install (DIRECTORY "/home/menelaos/libs/incubator-milagro-crypto-c/lib" DESTINATION "${RESOURCES_PATH}")
