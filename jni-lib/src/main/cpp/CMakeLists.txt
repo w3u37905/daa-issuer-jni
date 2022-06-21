@@ -8,11 +8,6 @@
 message(STATUS "project source dir: ${PROJECT_SOURCE_DIR}")
 
 
-set(RESOURCES_PATH "${PROJECT_SOURCE_DIR}/../../../src/main/resources")
-file(COPY "/home/menelaos/libs/cJSON/build/" DESTINATION "${RESOURCES_PATH}")
-
-
-
 
 project("daabridgecpp")
 
@@ -24,7 +19,7 @@ find_package(OpenSSL REQUIRED)
 link_directories(/home/menelaos/libs/ibmtss/utils)
 include_directories(/home/menelaos/libs/ibmtss/utils)
 
-link_directories(${RESOURCES_PATH})
+link_directories(../resources)
 include_directories(/home/menelaos/libs/cJSON)
 
 link_directories(/home/menelaos/libs/incubator-milagro-crypto-c/lib)
@@ -51,6 +46,8 @@ target_link_libraries(daabridgecpp m crypto cjson ibmtss amcl_bls_FP256BN amcl_m
 #set(NATIVES_PATH "${PROJECT_SOURCE_DIR}/../../../build/natives/lib")
 #set(RESOURCES_PATH "${PROJECT_SOURCE_DIR}/../../../build/resources/main")
 
+set(RESOURCES_PATH "${PROJECT_SOURCE_DIR}/../../../src/main/resources")
+file(COPY "/home/menelaos/libs/cJSON/build/" DESTINATION "${RESOURCES_PATH}")
 
 
 #install (DIRECTORY "/home/menelaos/libs/ibmtss/utils" DESTINATION "${NATIVES_PATH}")
