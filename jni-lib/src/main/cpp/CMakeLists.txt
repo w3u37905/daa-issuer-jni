@@ -19,7 +19,7 @@ find_package(OpenSSL REQUIRED)
 link_directories(${PROJECT_SOURCE_DIR}/libs)
 include_directories(/home/menelaos/libs/ibmtss/utils)
 
-link_directories(/home/menelaos/daa-issuer-jni/jni-lib/libs)
+link_directories(${PROJECT_SOURCE_DIR}/libs)
 include_directories(/home/menelaos/libs/cJSON)
 
 link_directories(${PROJECT_SOURCE_DIR}/libs)
@@ -42,13 +42,8 @@ target_sources(
         native-lib.cpp
 )
 
-#target_link_libraries(daabridgecpp m crypto cjson ibmtss amcl_bls_FP256BN amcl_mpin_FP256BN amcl_curve_FP256BN amcl_pairing_FP256BN amcl_wcc_FP256BN)
-
-target_link_libraries(daabridgecpp m cjson)
-
-
+target_link_libraries(daabridgecpp m crypto cjson ibmtss amcl_bls_FP256BN amcl_mpin_FP256BN amcl_curve_FP256BN amcl_pairing_FP256BN amcl_wcc_FP256BN)
 
 set(CMAKE_INSTALL_PREFIX "${PROJECT_SOURCE_DIR}/../")
 set(INTELIJ_PATH "")
-
 install (DIRECTORY "${PROJECT_SOURCE_DIR}/libs" DESTINATION "${CMAKE_INSTALL_PREFIX}${INTELIJ_PATH}")
