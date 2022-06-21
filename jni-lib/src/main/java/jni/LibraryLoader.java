@@ -50,7 +50,7 @@ public class LibraryLoader {
         // Load the os-dependent library from the jar file
         String nativeLibraryName = System.mapLibraryName(name);
 
-        String nativeLibraryPath = "jni-lib";
+        String nativeLibraryPath = "";
 
         if (cls.getResource(nativeLibraryPath + "/" + nativeLibraryName) == null) {
             throw new Exception("Error loading native library: " + nativeLibraryPath + "/" + nativeLibraryName);
