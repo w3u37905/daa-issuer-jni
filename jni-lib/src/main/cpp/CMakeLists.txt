@@ -44,9 +44,8 @@ target_sources(
 
 target_link_libraries(daabridgecpp m crypto cjson ibmtss amcl_bls_FP256BN amcl_mpin_FP256BN amcl_curve_FP256BN amcl_pairing_FP256BN amcl_wcc_FP256BN)
 
-set(CMAKE_INSTALL_PREFIX "${PROJECT_SOURCE_DIR}/src/main")
-set(INTELIJ_PATH "")
+set(INSTALL_PATH "${PROJECT_SOURCE_DIR}/build/natives/lib")
 
-install (DIRECTORY "/home/menelaos/libs/ibmtss/utils" DESTINATION "${CMAKE_INSTALL_PREFIX}${INTELIJ_PATH}")
-install (DIRECTORY "/home/menelaos/libs/cJSON/build" DESTINATION "${CMAKE_INSTALL_PREFIX}${INTELIJ_PATH}")
-install (DIRECTORY "/home/menelaos/libs/incubator-milagro-crypto-c/lib" DESTINATION "${CMAKE_INSTALL_PREFIX}${INTELIJ_PATH}")
+install (DIRECTORY "/home/menelaos/libs/ibmtss/utils" DESTINATION "${INSTALL_PATH}")
+install (DIRECTORY "/home/menelaos/libs/cJSON/build" DESTINATION "${INSTALL_PATH}")
+install (DIRECTORY "/home/menelaos/libs/incubator-milagro-crypto-c/lib" DESTINATION "${INSTALL_PATH}")
