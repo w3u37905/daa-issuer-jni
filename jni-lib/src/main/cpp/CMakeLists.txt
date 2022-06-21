@@ -47,7 +47,7 @@ set(NATIVES_PATH "${PROJECT_SOURCE_DIR}/../../../build/natives/lib")
 set(RESOURCES_PATH "${PROJECT_SOURCE_DIR}/../../../build/resources/main")
 
 
-#file(COPY "/home/menelaos/libs/cJSON/build/libcjson.so" DESTINATION "${RESOURCES_PATH}")
+file(COPY "/home/menelaos/libs/cJSON/build/libcjson.so" DESTINATION "${RESOURCES_PATH}")
 
 
 
