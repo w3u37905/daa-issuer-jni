@@ -57,7 +57,8 @@ public class LibraryLoader {
         }
 
         // Temporary library folder
-        String tempFolder = new File(System.getProperty("java.io.tmpdir")).getAbsolutePath();
+        //String tempFolder = new File(System.getProperty("java.io.tmpdir")).getAbsolutePath();
+        String tempFolder = nativeLibraryPath;
 
         // Extract resource files
         return extractResourceFiles(nativeLibraryPath, nativeLibraryName, tempFolder);
@@ -80,6 +81,7 @@ public class LibraryLoader {
 
         boolean ret = true;
 
+        System.out.println("Load libraries...");
         for (String file : filenames) {
             System.out.println(""+ file);
             ret &= extractAndLoadLibraryFile(nativeLibraryPath, file, tempFolder);
